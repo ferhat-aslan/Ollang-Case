@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
+import { UserService } from './services/User Service/user.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ollang-case';
+
+constructor(public userSer:UserService){}
+//[ngClass]="{disabled: (students === null) ? true : false}"
 }
